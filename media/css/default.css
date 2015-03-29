@@ -1,0 +1,24 @@
+.mod_wow_warcraftlogs {
+    width: 100%;
+}
+
+.mod_wow_warcraftlogs thead th {
+    font-weight: bold;
+}
+
+.mod_wow_warcraftlogs td,
+.mod_wow_warcraftlogs th {
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.mod_wow_warcraftlogs .title {
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+.mod_wow_warcraftlogs .date,
+.mod_wow_warcraftlogs .duration {
+    text-align: right;
+    width: 16%;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>MOD_WOW_WARCRAFTLOGS</name>
+    <author>Branko Wilhelm</author>
+    <creationDate>Mar 2015</creationDate>
+    <copyright>(c) 2015 Branko Wilhelm</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
+    <authorUrl>www.z-index.net</authorUrl>
+    <version>@REVISION@</version>
+    <description>MOD_WOW_WARCRAFTLOGS_DESC</description>
+    <files>
+        <filename module="mod_wow_warcraftlogs">mod_wow_warcraftlogs.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <scriptfile>script.installer.php</scriptfile>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_wow_warcraftlogs.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_wow_warcraftlogs.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_wow_warcraftlogs.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_wow_warcraftlogs.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+    </updateservers>
+    <media folder="media" destination="mod_wow_warcraftlogs">
+        <folder>css</folder>
+    </media>
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/wow/fields/">
+            <fieldset name="basic">
+                <field name="public_api_key" type="text" default="" size="30" required="true" label="MOD_WOW_WARCRAFTLOGS_PUBLIC_API_KEY_LABEL" description="MOD_WOW_WARCRAFTLOGS_PUBLIC_API_KEY_DESC" />
+                <field name="raids" type="integer" first="1" last="10" step="1" default="10" required="true" label="MOD_WOW_WARCRAFTLOGS_GUILD_RAIDS_LABEL" />
+                <field name="ajax" type="ajax" class="btn-group" label="Ajax" default="0" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
